@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "URL Shortener API",
+    "description": "A simple public URL shortener. Submit a long URL and receive a shortened link. Based on https://github.com/marwan-pr/short_link.",
+    "version": "0.1.0",
+    "contact": {
+      "name": "marwan-pr/short_link",
+      "url": "https://github.com/marwan-pr/short_link"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://li.page.gd",
+      "description": "URL shortener production host"
+    }
+  ],
+  "paths": {
+    "/api/set/index.php": {
+      "get": {
+        "operationId": "createShortLink",
+        "summary": "Create a short link",
+        "description": "Shortens the supplied URL. The URL must begin with http:// or https://.",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "The full URL to shorten (must start with http:// or https://).",
+            "schema": { "type": "string", "format": "uri", "example": "https://google.com" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result of the shorten operation. A success carries the shortened URL in `code`; an error carries a message in `M` and a status type in `C`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "description": "The shortened URL (present on success).",
+                      "example": "https://li.page.gd/abc123"
+                    },
+                    "M": {
+                      "type": "string",
+                      "description": "Server message (present on error)."
+                    },
+                    "C": {
+                      "type": "string",
+                      "description": "Status type: G for information, R for error.",
+                      "enum": ["G", "R"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

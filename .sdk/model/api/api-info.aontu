@@ -1,0 +1,26 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        name: "marwan-pr/short_link"
+        url: "https://github.com/marwan-pr/short_link"
+      }
+      description: "A simple public URL shortener. Submit a long URL and receive a shortened link. Based on https://github.com/marwan-pr/short_link."
+      servers: [
+        {
+          description: "URL shortener production host"
+          url: "https://li.page.gd"
+        }
+      ]
+      summary: "A simple public URL shortener."
+      title: "URL Shortener API"
+      version: "0.1.0"
+      website: "https://li.page.gd"
+    }
+  }
+}
+

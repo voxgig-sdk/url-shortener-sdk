@@ -1,0 +1,28 @@
+# BasicIndexFlow
+
+main: kit: flow: BasicIndexFlow:
+{
+  entity: "index",
+  kind: "basic",
+  name: "BasicIndexFlow",
+  step: [
+    {
+      input: {
+        ref: "index_ref01",
+        srcdatavar: "index_ref01_data",
+        suffix: "_dt0"
+      }
+
+      op: "load",
+      valid: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-index_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicIndexFlow"
+}

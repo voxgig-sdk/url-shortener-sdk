@@ -1,0 +1,44 @@
+# frozen_string_literal: true
+
+# Typed models for the UrlShortener SDK.
+#
+# GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
+# params (op.<name>.points[].args.params[]). Member types come from the
+# canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
+# @voxgig/apidef VALID_CANON). Ruby types are unenforced; these YARD
+# annotations document the shapes. Do not edit by hand.
+
+# Index entity data model.
+#
+# @!attribute [rw] c
+#   @return [String, nil]
+#
+# @!attribute [rw] code
+#   @return [String, nil]
+#
+# @!attribute [rw] m
+#   @return [String, nil]
+Index = Struct.new(
+  :c,
+  :code,
+  :m,
+  keyword_init: true
+)
+
+# Request payload for Index#load.
+#
+# @!attribute [rw] c
+#   @return [String, nil]
+#
+# @!attribute [rw] code
+#   @return [String, nil]
+#
+# @!attribute [rw] m
+#   @return [String, nil]
+IndexLoadMatch = Struct.new(
+  :c,
+  :code,
+  :m,
+  keyword_init: true
+)
+

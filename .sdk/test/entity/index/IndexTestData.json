@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "index": {
+      "INDEX00": {
+        "c": "s1e",
+        "code": "s1f",
+        "m": "s20",
+        "id": "INDEX00"
+      },
+      "INDEX01": {
+        "c": "s3c",
+        "code": "s3d",
+        "m": "s3e",
+        "id": "INDEX01"
+      },
+      "INDEX02": {
+        "c": "s5a",
+        "code": "s5b",
+        "m": "s5c",
+        "id": "INDEX02"
+      }
+    }
+  },
+  "new": {
+    "index": {
+      "index_ref01": {
+        "c": "s78",
+        "code": "s79",
+        "m": "s7a"
+      }
+    }
+  }
+}
