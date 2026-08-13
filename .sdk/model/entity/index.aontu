@@ -6,17 +6,17 @@ main: kit: entity: index: {
 
   fields: [
     {
-      name: "c"
+      name: "C"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "M"
       req: false
       type: "`$STRING`"
     }
     {
       name: "code"
-      req: false
-      type: "`$STRING`"
-    }
-    {
-      name: "m"
       req: false
       type: "`$STRING`"
     }

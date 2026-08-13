@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import UrlShortenerControl
-from core.error import UrlShortenerError
-from core.result import UrlShortenerResult
-from core.spec import UrlShortenerSpec
+from urlshortener_sdk.config import make_config
+from urlshortener_sdk.features import _make_feature
+from urlshortener_sdk.core.control import UrlShortenerControl
+from urlshortener_sdk.core.error import UrlShortenerError
+from urlshortener_sdk.core.result import UrlShortenerResult
+from urlshortener_sdk.core.spec import UrlShortenerSpec
 
 
 # True when this SDK was generated with the named feature.

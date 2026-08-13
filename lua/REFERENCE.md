@@ -90,9 +90,9 @@ local index = client:Index(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `c` | `string` | No |  |
+| `C` | `string` | No |  |
+| `M` | `string` | No |  |
 | `code` | `string` | No |  |
-| `m` | `string` | No |  |
 
 ### Operations
 

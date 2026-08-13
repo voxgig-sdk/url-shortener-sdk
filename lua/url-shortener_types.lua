@@ -7,14 +7,14 @@
 -- edit by hand.
 
 ---@class Index
----@field c? string
+---@field C? string
+---@field M? string
 ---@field code? string
----@field m? string
 
 ---@class IndexLoadMatch
----@field c? string
+---@field C? string
+---@field M? string
 ---@field code? string
----@field m? string
 
 local M = {}
 

@@ -65,11 +65,11 @@ def index_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "URLSHORTENER_TEST_INDEX_ENTID" => {},
-    "URLSHORTENER_TEST_LIVE" => "FALSE",
+    "URL_SHORTENER_TEST_INDEX_ENTID" => {},
+    "URL_SHORTENER_TEST_LIVE" => "FALSE",
   })
 
-  live = env["URLSHORTENER_TEST_LIVE"] == "TRUE"
+  live = env["URL_SHORTENER_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

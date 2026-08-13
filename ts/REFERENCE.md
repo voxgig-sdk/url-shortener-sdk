@@ -116,9 +116,9 @@ const index = client.Index()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `c` | `string` | No |  |
+| `C` | `string` | No |  |
+| `M` | `string` | No |  |
 | `code` | `string` | No |  |
-| `m` | `string` | No |  |
 
 ### Operations
 

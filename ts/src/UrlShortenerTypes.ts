@@ -6,14 +6,14 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Index {
-  c?: string
+  C?: string
+  M?: string
   code?: string
-  m?: string
 }
 
 export interface IndexLoadMatch {
-  c?: string
+  C?: string
+  M?: string
   code?: string
-  m?: string
 }
 

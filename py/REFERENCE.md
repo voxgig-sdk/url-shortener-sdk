@@ -87,9 +87,9 @@ index = client.Index()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `c` | `str` | No |  |
+| `C` | `str` | No |  |
+| `M` | `str` | No |  |
 | `code` | `str` | No |  |
-| `m` | `str` | No |  |
 
 ### Operations
 

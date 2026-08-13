@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import UrlShortenerSDK
-from core.error import UrlShortenerError
-from core.result import UrlShortenerResult
-from core.response import UrlShortenerResponse
-from core.spec import UrlShortenerSpec
-from feature.base_feature import UrlShortenerBaseFeature
+from projectname_sdk.core.error import UrlShortenerError
+from projectname_sdk.core.result import UrlShortenerResult
+from projectname_sdk.core.response import UrlShortenerResponse
+from projectname_sdk.core.spec import UrlShortenerSpec
+from projectname_sdk.feature.base_feature import UrlShortenerBaseFeature
 
 
 def _client():

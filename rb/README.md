@@ -34,7 +34,7 @@ client = UrlShortenerSDK.new
 
 ```ruby
 begin
-  # load returns the bare Index record (raises on error).
+  # load returns the ENTITY — call data_get for the Index record (raises on error).
   index = client.Index.load()
   puts index
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = UrlShortenerSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 index = client.Index.load()
 puts index
 ```
@@ -234,9 +235,9 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `c` |  |
+| `C` |  |
+| `M` |  |
 | `code` |  |
-| `m` |  |
 
 Operations: Load.
 
@@ -261,14 +262,14 @@ Create an instance: `index = client.Index`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `c` | `String` |  |
+| `C` | `String` |  |
+| `M` | `String` |  |
 | `code` | `String` |  |
-| `m` | `String` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Index record (raises on error).
+# load returns the ENTITY — call data_get for the Index record (raises on error).
 index = client.Index.load()
 ```
 

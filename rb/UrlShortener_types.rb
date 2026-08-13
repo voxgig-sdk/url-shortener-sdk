@@ -10,35 +10,35 @@
 
 # Index entity data model.
 #
-# @!attribute [rw] c
+# @!attribute [rw] C
+#   @return [String, nil]
+#
+# @!attribute [rw] M
 #   @return [String, nil]
 #
 # @!attribute [rw] code
 #   @return [String, nil]
-#
-# @!attribute [rw] m
-#   @return [String, nil]
 Index = Struct.new(
-  :c,
+  :C,
+  :M,
   :code,
-  :m,
   keyword_init: true
 )
 
 # Request payload for Index#load.
 #
-# @!attribute [rw] c
+# @!attribute [rw] C
+#   @return [String, nil]
+#
+# @!attribute [rw] M
 #   @return [String, nil]
 #
 # @!attribute [rw] code
 #   @return [String, nil]
-#
-# @!attribute [rw] m
-#   @return [String, nil]
 IndexLoadMatch = Struct.new(
-  :c,
+  :C,
+  :M,
   :code,
-  :m,
   keyword_init: true
 )
 

@@ -93,9 +93,9 @@ index = client.Index
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `c` | `String` | No |  |
+| `C` | `String` | No |  |
+| `M` | `String` | No |  |
 | `code` | `String` | No |  |
-| `m` | `String` | No |  |
 
 ### Operations
 

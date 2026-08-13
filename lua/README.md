@@ -225,9 +225,9 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `c` |  |
+| `C` |  |
+| `M` |  |
 | `code` |  |
-| `m` |  |
 
 Operations: Load.
 
@@ -252,9 +252,9 @@ Create an instance: `local index = client:Index(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `c` | `string` |  |
+| `C` | `string` |  |
+| `M` | `string` |  |
 | `code` | `string` |  |
-| `m` | `string` |  |
 
 #### Example: Load
 

@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from urlshortener_sdk.utility.voxgig_struct import voxgig_struct as vs
 from urlshortener_sdk import UrlShortenerSDK
-from core import helpers
+from urlshortener_sdk.core import helpers
 from test import runner
 
 
@@ -61,11 +61,11 @@ def _index_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "URLSHORTENER_TEST_INDEX_ENTID": {},
-        "URLSHORTENER_TEST_LIVE": "FALSE",
+        "URL_SHORTENER_TEST_INDEX_ENTID": {},
+        "URL_SHORTENER_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("URLSHORTENER_TEST_LIVE") == "TRUE"
+    live = env.get("URL_SHORTENER_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

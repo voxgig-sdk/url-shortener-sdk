@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# UrlShortener SDK exists test
 
 import pytest
 from urlshortener_sdk import UrlShortenerSDK

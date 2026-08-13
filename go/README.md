@@ -258,9 +258,9 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"c"` |  |
+| `"C"` |  |
+| `"M"` |  |
 | `"code"` |  |
-| `"m"` |  |
 
 Operations: Load.
 
@@ -285,9 +285,9 @@ Create an instance: `index := client.Index(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `c` | `string` |  |
+| `C` | `string` |  |
+| `M` | `string` |  |
 | `code` | `string` |  |
-| `m` | `string` |  |
 
 #### Example: Load
 

@@ -23,8 +23,8 @@ module UrlShortenerTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("URLSHORTENER_TEST_LIVE")
-    override = getenv("URLSHORTENER_TEST_OVERRIDE")
+    live = getenv("URL_SHORTENER_TEST_LIVE")
+    override = getenv("URL_SHORTENER_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module UrlShortenerTestRunner
       end
     end
 
-    explain = getenv("URLSHORTENER_TEST_EXPLAIN")
-    m["URLSHORTENER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("URL_SHORTENER_TEST_EXPLAIN")
+    m["URL_SHORTENER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

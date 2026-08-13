@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = UrlShortenerSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = UrlShortenerSDK.test({
+  entity: {
+    index: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const index = await client.Index().load()
-// index is a bare Index populated with mock data
+// index is the Index entity, populated with mock data
+// — call index.data() for the record itself
 console.log(index)
 ```
 
@@ -182,7 +191,7 @@ require_once 'urlshortener_sdk.php';
 $client = new UrlShortenerSDK();
 
 
-// Load a specific index (returns the bare record; throws on error)
+// Load a specific index (returns the ENTITY; call data_get() for the record; throws on error)
 $index = $client->Index()->load();
 print_r($index);
 ```
@@ -210,7 +219,7 @@ require_relative "UrlShortener_sdk"
 client = UrlShortenerSDK.new
 
 
-# Load a specific index (returns the bare record; raises on error)
+# Load a specific index (returns the ENTITY; call data_get for the record)
 index = client.Index.load()
 puts index
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/marwan-pr/short_link](https://github.com/marwan-pr/short_link)
 

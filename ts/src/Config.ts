@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'UrlShortener',
   }
 
 
@@ -56,21 +56,21 @@ class Config {
       "fields": [
         {
           "active": true,
-          "name": "c",
+          "name": "C",
           "req": false,
           "type": "`$STRING`",
           "index$": 0
         },
         {
           "active": true,
-          "name": "code",
+          "name": "M",
           "req": false,
           "type": "`$STRING`",
           "index$": 1
         },
         {
           "active": true,
-          "name": "m",
+          "name": "code",
           "req": false,
           "type": "`$STRING`",
           "index$": 2
@@ -97,6 +97,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/api/set/index.php",
               "parts": [

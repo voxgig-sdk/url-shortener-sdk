@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ UrlShortenerUtility::setRegistrar(function (UrlShortenerUtility $u): void {
     $u->prepare_params = [UrlShortenerPrepareParams::class, 'call'];
     $u->prepare_path = [UrlShortenerPreparePath::class, 'call'];
     $u->prepare_query = [UrlShortenerPrepareQuery::class, 'call'];
+    $u->graphql_body = [UrlShortenerGraphql::class, 'body'];
+    $u->graphql_errors = [UrlShortenerGraphql::class, 'errors'];
     $u->result_basic = [UrlShortenerResultBasic::class, 'call'];
     $u->result_body = [UrlShortenerResultBody::class, 'call'];
     $u->result_headers = [UrlShortenerResultHeaders::class, 'call'];

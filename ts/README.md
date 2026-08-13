@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = UrlShortenerSDK.test()
 
 const index = await client.Index().load()
-// index is a bare entity populated with mock response data
+// index is the entity, populated with mock response data
+// — call index.data() for the record itself
 console.log(index)
 ```
 
@@ -284,9 +285,9 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `c` |  |
+| `C` |  |
+| `M` |  |
 | `code` |  |
-| `m` |  |
 
 Operations: load.
 
@@ -311,9 +312,9 @@ Create an instance: `const index = client.Index()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `c` | `string` |  |
+| `C` | `string` |  |
+| `M` | `string` |  |
 | `code` | `string` |  |
-| `m` | `string` |  |
 
 #### Example: Load
 

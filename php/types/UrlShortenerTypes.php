@@ -15,16 +15,16 @@ declare(strict_types=1);
 /** Index entity data model. */
 class Index
 {
-    public ?string $c = null;
+    public ?string $C = null;
+    public ?string $M = null;
     public ?string $code = null;
-    public ?string $m = null;
 }
 
 /** Request payload for Index#load. */
 class IndexLoadMatch
 {
-    public ?string $c = null;
+    public ?string $C = null;
+    public ?string $M = null;
     public ?string $code = null;
-    public ?string $m = null;
 }
 
