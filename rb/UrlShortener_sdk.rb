@@ -28,7 +28,7 @@ class UrlShortenerSDK
     utility = UrlShortenerUtility.new
     @_utility = utility
 
-    config = UrlShortenerConfig.make_config
+    config = UrlShortenerConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

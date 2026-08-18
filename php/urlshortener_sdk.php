@@ -40,7 +40,7 @@ class UrlShortenerSDK
         $utility = new UrlShortenerUtility();
         $this->_utility = $utility;
 
-        $config = UrlShortenerConfig::make_config();
+        $config = UrlShortenerConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,
