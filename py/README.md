@@ -241,9 +241,9 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `C` |  |
-| `M` |  |
-| `code` |  |
+| `C` | Status type: G for information, R for error. |
+| `M` | Server message (present on error). |
+| `code` | The shortened URL (present on success). |
 
 Operations: Load.
 
@@ -268,9 +268,9 @@ Create an instance: `index = client.Index()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `C` | `str` |  |
-| `M` | `str` |  |
-| `code` | `str` |  |
+| `C` | `str` | Status type: G for information, R for error. |
+| `M` | `str` | Server message (present on error). |
+| `code` | `str` | The shortened URL (present on success). |
 
 #### Example: Load
 

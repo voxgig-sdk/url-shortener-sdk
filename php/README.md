@@ -245,9 +245,9 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `C` |  |
-| `M` |  |
-| `code` |  |
+| `C` | Status type: G for information, R for error. |
+| `M` | Server message (present on error). |
+| `code` | The shortened URL (present on success). |
 
 Operations: Load.
 
@@ -272,9 +272,9 @@ Create an instance: `$index = $client->Index();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `C` | `string` |  |
-| `M` | `string` |  |
-| `code` | `string` |  |
+| `C` | `string` | Status type: G for information, R for error. |
+| `M` | `string` | Server message (present on error). |
+| `code` | `string` | The shortened URL (present on success). |
 
 #### Example: Load
 

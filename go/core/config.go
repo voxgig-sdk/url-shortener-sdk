@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "UrlShortener",
+			"slug": "url-shortener",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,14 +36,17 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "C",
+						"short": "Status type: G for information, R for error.",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "M",
+						"short": "Server message (present on error).",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "code",
+						"short": "The shortened URL (present on success).",
 						"type": "`$STRING`",
 					},
 				},

@@ -33,6 +33,9 @@ class UrlShortenerConfig
         return [
             "main" => [
                 "name" => "UrlShortener",
+                "slug" => "url-shortener",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -55,14 +58,17 @@ class UrlShortenerConfig
           'fields' => [
             [
               'name' => 'C',
+              'short' => 'Status type: G for information, R for error.',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'M',
+              'short' => 'Server message (present on error).',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'code',
+              'short' => 'The shortened URL (present on success).',
               'type' => '`$STRING`',
             ],
           ],

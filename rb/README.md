@@ -235,9 +235,9 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `C` |  |
-| `M` |  |
-| `code` |  |
+| `C` | Status type: G for information, R for error. |
+| `M` | Server message (present on error). |
+| `code` | The shortened URL (present on success). |
 
 Operations: Load.
 
@@ -262,9 +262,9 @@ Create an instance: `index = client.Index`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `C` | `String` |  |
-| `M` | `String` |  |
-| `code` | `String` |  |
+| `C` | `String` | Status type: G for information, R for error. |
+| `M` | `String` | Server message (present on error). |
+| `code` | `String` | The shortened URL (present on success). |
 
 #### Example: Load
 

@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'UrlShortener',
+        slug: "url-shortener",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -56,14 +67,17 @@ class Config {
       "fields": [
         {
           "name": "C",
+          "short": "Status type: G for information, R for error.",
           "type": "`$STRING`"
         },
         {
           "name": "M",
+          "short": "Server message (present on error).",
           "type": "`$STRING`"
         },
         {
           "name": "code",
+          "short": "The shortened URL (present on success).",
           "type": "`$STRING`"
         }
       ],

@@ -98,9 +98,9 @@ fmt.Println(index.GetName()) // "index"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `C` | `string` | No |  |
-| `M` | `string` | No |  |
-| `code` | `string` | No |  |
+| `C` | `string` | No | Status type: G for information, R for error. |
+| `M` | `string` | No | Server message (present on error). |
+| `code` | `string` | No | The shortened URL (present on success). |
 
 ### Operations
 

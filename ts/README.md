@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -285,9 +285,9 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `C` |  |
-| `M` |  |
-| `code` |  |
+| `C` | Status type: G for information, R for error. |
+| `M` | Server message (present on error). |
+| `code` | The shortened URL (present on success). |
 
 Operations: load.
 
@@ -312,9 +312,9 @@ Create an instance: `const index = client.Index()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `C` | `string` |  |
-| `M` | `string` |  |
-| `code` | `string` |  |
+| `C` | `string` | Status type: G for information, R for error. |
+| `M` | `string` | Server message (present on error). |
+| `code` | `string` | The shortened URL (present on success). |
 
 #### Example: Load
 

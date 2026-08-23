@@ -6,7 +6,7 @@ The Golang SDK for the UrlShortener API — an entity-oriented client using stan
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Index(nil)` — each with the same small set of operations (`Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -258,9 +258,9 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"C"` |  |
-| `"M"` |  |
-| `"code"` |  |
+| `"C"` | Status type: G for information, R for error. |
+| `"M"` | Server message (present on error). |
+| `"code"` | The shortened URL (present on success). |
 
 Operations: Load.
 
@@ -285,9 +285,9 @@ Create an instance: `index := client.Index(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `C` | `string` |  |
-| `M` | `string` |  |
-| `code` | `string` |  |
+| `C` | `string` | Status type: G for information, R for error. |
+| `M` | `string` | Server message (present on error). |
+| `code` | `string` | The shortened URL (present on success). |
 
 #### Example: Load
 

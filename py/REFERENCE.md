@@ -87,9 +87,9 @@ index = client.Index()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `C` | `str` | No |  |
-| `M` | `str` | No |  |
-| `code` | `str` | No |  |
+| `C` | `str` | No | Status type: G for information, R for error. |
+| `M` | `str` | No | Server message (present on error). |
+| `code` | `str` | No | The shortened URL (present on success). |
 
 ### Operations
 

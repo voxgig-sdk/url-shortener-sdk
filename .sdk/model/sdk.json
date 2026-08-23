@@ -36,18 +36,21 @@
               "active": true,
               "name": "C",
               "req": false,
+              "short": "Status type: G for information, R for error.",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "M",
               "req": false,
+              "short": "Server message (present on error).",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "code",
               "req": false,
+              "short": "The shortened URL (present on success).",
               "type": "`$STRING`"
             }
           ],

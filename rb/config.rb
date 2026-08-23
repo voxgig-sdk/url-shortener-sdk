@@ -19,6 +19,9 @@ module UrlShortenerConfig
     {
       "main" => {
         "name" => "UrlShortener",
+        "slug" => "url-shortener",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,14 +44,17 @@ module UrlShortenerConfig
           "fields" => [
             {
               "name" => "C",
+              "short" => "Status type: G for information, R for error.",
               "type" => "`$STRING`",
             },
             {
               "name" => "M",
+              "short" => "Server message (present on error).",
               "type" => "`$STRING`",
             },
             {
               "name" => "code",
+              "short" => "The shortened URL (present on success).",
               "type" => "`$STRING`",
             },
           ],
