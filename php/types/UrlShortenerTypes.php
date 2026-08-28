@@ -23,8 +23,6 @@ class Index
 /** Request payload for Index#load. */
 class IndexLoadMatch
 {
-    public ?string $C = null;
-    public ?string $M = null;
-    public ?string $code = null;
+    public string $url;
 }
 

@@ -12,9 +12,7 @@
 ---@field code? string
 
 ---@class IndexLoadMatch
----@field C? string
----@field M? string
----@field code? string
+---@field url string
 
 local M = {}
 

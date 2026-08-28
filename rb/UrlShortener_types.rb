@@ -27,18 +27,10 @@ Index = Struct.new(
 
 # Request payload for Index#load.
 #
-# @!attribute [rw] C
-#   @return [String, nil]
-#
-# @!attribute [rw] M
-#   @return [String, nil]
-#
-# @!attribute [rw] code
-#   @return [String, nil]
+# @!attribute [rw] url
+#   @return [String]
 IndexLoadMatch = Struct.new(
-  :C,
-  :M,
-  :code,
+  :url,
   keyword_init: true
 )
 

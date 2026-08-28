@@ -22,7 +22,5 @@ class Index(TypedDict, total=False):
     code: str
 
 
-class IndexLoadMatch(TypedDict, total=False):
-    C: str
-    M: str
-    code: str
+class IndexLoadMatch(TypedDict):
+    url: str

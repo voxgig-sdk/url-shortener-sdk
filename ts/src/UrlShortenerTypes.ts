@@ -12,8 +12,6 @@ export interface Index {
 }
 
 export interface IndexLoadMatch {
-  C?: string
-  M?: string
-  code?: string
+  url: string
 }
 

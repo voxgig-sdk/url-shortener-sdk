@@ -21,9 +21,7 @@ type Index struct {
 
 // IndexLoadMatch is the typed request payload for Index.LoadTyped.
 type IndexLoadMatch struct {
-	C *string `json:"C,omitempty"`
-	M *string `json:"M,omitempty"`
-	Code *string `json:"code,omitempty"`
+	Url string `json:"url"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

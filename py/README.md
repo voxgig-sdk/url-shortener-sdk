@@ -42,7 +42,7 @@ client = UrlShortenerSDK()
 
 ```python
 try:
-    index = client.Index().load()
+    index = client.Index().load({"url": "example_url"})
     print(index)
 except Exception as err:
     print(f"load failed: {err}")
@@ -55,7 +55,7 @@ Entity operations raise on failure, so wrap them in `try` / `except`:
 
 ```python
 try:
-    index = client.Index().load()
+    index = client.Index().load({"url": "example"})
     print(index)
 except Exception as err:
     print(f"load failed: {err}")
@@ -124,7 +124,7 @@ client = UrlShortenerSDK.test()
 
 # Entity ops return the ENTITY and raises on error;
 # call data_get() for the record.
-index = client.Index().load()
+index = client.Index().load({"url": "example"})
 # index contains the mock response record
 ```
 
@@ -275,8 +275,31 @@ Create an instance: `index = client.Index()`
 #### Example: Load
 
 ```python
-index = client.Index().load()
+index = client.Index().load({"url": "url"})
 ```
+
+## Features
+
+This SDK ships 1 optional features. Each is **inactive until you
+switch it on**, so an SDK you have not configured behaves exactly as if none of
+them existed — no retries, no cache, no logging, no measurable overhead.
+
+Activate a feature by name in the client options, alongside the options shown
+above:
+
+| Feature | What it does |
+|---|---|
+| [`test`](#test) | In-memory mock transport for testing without a live server |
+
+### test
+
+In-memory mock transport for testing without a live server.
+
+| Option | Default |
+|---|---|
+| `active` | `false` |
+
+Set `feature.test.active` to enable it, then override any of the options above.
 
 
 ## Advanced
@@ -355,7 +378,7 @@ stores the returned data and match criteria internally.
 
 ```python
 index = client.Index()
-index.load()
+index.load({"url": "example"})
 
 # index.data_get() now returns the index data from the last load
 # index.match_get() returns the last match criteria
