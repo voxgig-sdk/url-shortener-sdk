@@ -95,10 +95,16 @@ class UrlShortenerConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/set/index.php',
-                  'parts' => [
-                    'api',
-                    'set',
-                    'index.php',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'set',
+                    ],
+                    [
+                      'lit' => 'index.php',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -108,6 +114,11 @@ class UrlShortenerConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'set',
+                    'index.php',
                   ],
                 ],
               ],
