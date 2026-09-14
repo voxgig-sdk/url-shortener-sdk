@@ -105,7 +105,7 @@ local result, err = client:Index():load({ url = "example" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/url-shortener-sdk/releases) |
+| TypeScript | `@voxgig-sdk/url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/url-shortener-sdk/releases) |
 | Python | `voxgig-sdk-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/url-shortener-sdk/releases) |
 | PHP | `voxgig-sdk/url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/url-shortener-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/url-shortener-sdk/go` | `go get github.com/voxgig-sdk/url-shortener-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Index():load({ url = "example" })
 ### TypeScript
 
 ```ts
-import { UrlShortenerSDK } from '@voxgig-sdk/url-shortener'
+import { UrlShortenerSDK } from '@voxgig-sdk/url-shortener-sdk'
 
 const client = new UrlShortenerSDK()
 

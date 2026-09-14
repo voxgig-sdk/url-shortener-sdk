@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { UrlShortenerSDK } from '@voxgig-sdk/url-shortener'
+import { UrlShortenerSDK } from '@voxgig-sdk/url-shortener-sdk'
 
 const client = new UrlShortenerSDK()
 ```
@@ -405,7 +405,7 @@ url-shortener/
 Import the SDK from the package root:
 
 ```ts
-import { UrlShortenerSDK } from '@voxgig-sdk/url-shortener'
+import { UrlShortenerSDK } from '@voxgig-sdk/url-shortener-sdk'
 ```
 
 ### Entity state
