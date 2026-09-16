@@ -43,6 +43,12 @@ main: kit: entity: index: {
               }
             ]
           }
+          contract: {
+            id: "GET /api/set/index.php"
+            json: "{\"operationId\":\"createShortLink\",\"parameters\":[{\"description\":\"The full URL to shorten (must start with http:// or https://).\",\"in\":\"query\",\"name\":\"url\",\"required\":true,\"schema\":{\"example\":\"https://google.com\",\"format\":\"uri\",\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"C\":{\"description\":\"Status type: G for information, R for error.\",\"enum\":[\"G\",\"R\"],\"type\":\"string\"},\"M\":{\"description\":\"Server message (present on error).\",\"type\":\"string\"},\"code\":{\"description\":\"The shortened URL (present on success).\",\"example\":\"https://li.page.gd/abc123\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Result of the shorten operation. A success carries the shortened URL in `code`; an error carries a message in `M` and a status type in `C`.\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/set/index.php"
           segments: [

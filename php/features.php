@@ -4,7 +4,10 @@ declare(strict_types=1);
 // UrlShortener SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class UrlShortenerFeatures
@@ -14,8 +17,14 @@ class UrlShortenerFeatures
         switch ($name) {
             case "base":
                 return new UrlShortenerBaseFeature();
+            case "ratelimit":
+                return new UrlShortenerRatelimitFeature();
+            case "retry":
+                return new UrlShortenerRetryFeature();
             case "test":
                 return new UrlShortenerTestFeature();
+            case "timeout":
+                return new UrlShortenerTimeoutFeature();
             default:
                 return new UrlShortenerBaseFeature();
         }
@@ -31,7 +40,10 @@ class UrlShortenerFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;
