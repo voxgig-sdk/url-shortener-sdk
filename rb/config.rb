@@ -99,18 +99,21 @@ module UrlShortenerConfig
           "fields" => [
             {
               "name" => "C",
-              "short" => "Status type: G for information, R for error.",
+              "title" => "C",
               "type" => "`$STRING`",
+              "short" => "Status type: G for information, R for error.",
             },
             {
               "name" => "M",
-              "short" => "Server message (present on error).",
+              "title" => "M",
               "type" => "`$STRING`",
+              "short" => "Server message (present on error).",
             },
             {
               "name" => "code",
-              "short" => "The shortened URL (present on success).",
+              "title" => "Code",
               "type" => "`$STRING`",
+              "short" => "The shortened URL (present on success).",
             },
           ],
           "name" => "index",
@@ -120,18 +123,6 @@ module UrlShortenerConfig
               "name" => "load",
               "points" => [
                 {
-                  "args" => {
-                    "query" => [
-                      {
-                        "example" => "https://google.com",
-                        "kind" => "query",
-                        "name" => "url",
-                        "orig" => "url",
-                        "reqd" => true,
-                        "type" => "`$STRING`",
-                      },
-                    ],
-                  },
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/set/index.php",
@@ -146,20 +137,33 @@ module UrlShortenerConfig
                       "lit" => "index.php",
                     },
                   ],
-                  "select" => {
-                    "exist" => [
-                      "url",
-                    ],
-                  },
-                  "transform" => {
-                    "req" => "`reqdata`",
-                    "res" => "`body`",
-                  },
                   "parts" => [
                     "api",
                     "set",
                     "index.php",
                   ],
+                  "rename" => {},
+                  "transform" => {
+                    "req" => "`reqdata`",
+                    "res" => "`body`",
+                  },
+                  "args" => {
+                    "query" => [
+                      {
+                        "name" => "url",
+                        "orig" => "url",
+                        "type" => "`$STRING`",
+                        "kind" => "query",
+                        "reqd" => true,
+                        "example" => "https://google.com",
+                      },
+                    ],
+                  },
+                  "select" => {
+                    "exist" => [
+                      "url",
+                    ],
+                  },
                 },
               ],
             },

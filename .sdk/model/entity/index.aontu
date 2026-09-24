@@ -1,0 +1,83 @@
+# Entity: index
+
+main: kit: entity: index: {
+
+  alias: field: {}
+
+  fields: {
+    C: {
+      h: "C"
+      n: "C"
+      r: false
+      sh: "Status type: G for information, R for error."
+      t: "`$STRING`"
+    }
+    M: {
+      h: "M"
+      n: "M"
+      r: false
+      sh: "Server message (present on error)."
+      t: "`$STRING`"
+    }
+    code: {
+      h: "Code"
+      n: "code"
+      r: false
+      sh: "The shortened URL (present on success)."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "index"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/set/index.php"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "https://google.com"
+                k: "query"
+                n: "url"
+                or: "url"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/set/index.php"
+          q: {
+            exist: [
+              "url"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "set"
+            }
+            {
+              lit: "index.php"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
